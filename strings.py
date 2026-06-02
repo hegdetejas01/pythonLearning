@@ -173,4 +173,5 @@ print(s.replace('hell','heaven'))
 
 
 # Strip
-s
+x = "               Hello            world"
+print(x.strip())
