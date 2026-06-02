@@ -141,16 +141,73 @@
 
 
 
-# Print prime number between a range
-lowerNum = int(input("Enter the lower number: "))
-upperNum = int(input("Enter the upper number: "))
+# # Print prime number between a range
+# lowerNum = int(input("Enter the lower number: "))
+# upperNum = int(input("Enter the upper number: "))
 
-for i in range(lowerNum, upperNum+1):
-    prime = True
-    for j in range(2,i):
-        if i%j == 0:
-            prime = False
-            break
+# for i in range(lowerNum, upperNum+1):
+#     prime = True
+#     for j in range(2,i):
+#         if i%j == 0:
+#             prime = False
+#             break
 
-    if prime == True:
-        print(i)
+#     if prime == True:
+#         print(i)
+
+
+
+
+
+# # Find length of a str without using len()
+# s = input("Enter the string: ")
+# count = 0
+# for i in s:
+#     count += 1
+# print(count)
+
+
+
+
+# # Extract username from email, (the part before @)
+# email = "tejashegde@gmail.com"
+# pos = email.find('@')
+# print(email[:pos])
+
+
+
+
+# # Write a prog to remove a perticular char from a strong
+# s = input("Enter the string: ")
+# c = input("Enter the char to remove from the string: ")
+# r = ""
+# for i in s:
+#     if i != c:
+#         r = r+i
+# print(r)
+    
+
+
+
+# # Check palindrome string
+# s = input("Please enter the string: ")
+# sr = s[::-1]
+# if s == sr:
+#     print("palindrome")
+# else:
+#     print("Not Palindrome")
+
+
+
+
+# number of words in a string without using split()
+s = input("Please enter the string: ").strip()
+if not s:
+    print(0)
+else:
+    count = 0
+    for i in range(0,len(s)-1):
+        if s[i] == " " and s[i+1].isalnum():
+            count += 1
+
+    print(count+1)
