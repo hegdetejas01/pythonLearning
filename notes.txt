@@ -24,3 +24,8 @@ Rules for indentifier -
 input() - takes the value in STRING, because it is a UNIVERSAL DATA TYPE
 
 Declaring a variable in python is done by using None: k = None
+
+Loop Control Statements - Break, Continue, Pass
+
+python strings are immutable
+

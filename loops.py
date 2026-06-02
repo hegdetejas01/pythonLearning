@@ -41,3 +41,50 @@ for i in "Delhi":
 
 
 
+## NESTED LOOOOOOOOOOOOPS
+
+# Unique Pairs
+n,m = int(input("enter num1: ")), int(input("enter num2: "))
+for i in range(1,n+1):
+    for j in range(1,m+1):
+        if j>=i:
+            print("(", i,", ", j, ")")
+
+# Print Pattern
+n = int(input("enter the number of rows: "))
+for i in range(1,n+1):
+    for j in range(1,i+1):
+        print("*", end="")
+    print()
+
+
+# Print Pattern
+n = int(input("Enter the number of rows: "))
+for i in range(1,n+1):
+    for j in range(1,i+1):
+        print(j, end="")
+    for k in range(i-1, 0, -1):
+        print(k, end="")
+
+    print()
+
+
+
+### Loop control statement - break, continue, pass
+for i in range(1,11):
+    print(i)
+
+for i in range(1,11):
+    if i == 5:
+        break
+    print(i)
+
+for i in range(1,11):
+    if i == 5:
+        continue
+    print(i)
+
+for i in range(1,11):
+    pass
+
+
