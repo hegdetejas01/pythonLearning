@@ -1,0 +1,11 @@
+python created in 1989
+
+1. python design philosophy - readable, easy, 
+2. batteries included - inbuilt functions, datatypes
+3. General purpose
+4. Python Communities
+
+X() - X is a function
+
+Python is CASE SENSITIVE
+
