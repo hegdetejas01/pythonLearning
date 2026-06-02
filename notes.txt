@@ -9,3 +9,18 @@ X() - X is a function
 
 Python is CASE SENSITIVE
 
+Compilation - convert the code(high level language) to the binary language (0,1) done by compiler (compiles the entire program at once) or interpretor (compiles line by line)
+
+There are 32 Keywords in Python - reserved words
+
+Identifier - names given by user/programmer
+Rules for indentifier - 
+1. can start with a digit
+2. can start with upper/lower case
+3. only UNDERSCORE can be used in special character
+4. cannot be keywords
+
+
+input() - takes the value in STRING, because it is a UNIVERSAL DATA TYPE
+
+Declaring a variable in python is done by using None: k = None
