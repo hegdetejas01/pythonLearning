@@ -56,3 +56,39 @@ elif op == "*":
     print(num1*num2)
 else:
     print(num1/num2)
+
+
+
+
+
+# Guessing Game
+
+import random as r
+num = r.randint(1,100)
+guess = int(input("Enter the number: "))
+count = 1
+
+while num != guess:
+    if guess < num: 
+        print("Wrong, guess higher")
+    else:
+        print("Wrong, guess lower")
+
+    guess = int(input("Enter the number: "))
+    count += 1
+
+print("Correct Guess")
+print("Turns = ",count)
+
+
+
+
+
+# population of town is 10k, it is increasing at 10 percent per year. What is the population at the end of each year of the last 10 year.
+
+pop = 10000
+
+for i in range(0,10):
+    pop = 1.1 * pop
+    pop = pop//1
+    print("Population at the end of", i+1, "year is", pop)
