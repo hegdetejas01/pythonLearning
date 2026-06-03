@@ -20,7 +20,6 @@ Rules for indentifier -
 3. only UNDERSCORE can be used in special character
 4. cannot be keywords
 
-
 input() - takes the value in STRING, because it is a UNIVERSAL DATA TYPE
 
 Declaring a variable in python is done by using None: k = None
@@ -29,3 +28,31 @@ Loop Control Statements - Break, Continue, Pass
 
 python strings are immutable
 
+
+
+########### LISTS ###########
+
+Basics:
+1. It is a datatype to store multiple items under one names
+2. Dynamic datatype
+3. Helps to handle large datas of same type
+
+Differences between Array and Lists:
+1. Fixed versus Dynamic Size, i.e List is Dyanamic Array
+2. Arrays are homogeneous i.e only one data type can be stored, whereas lists are heterogeneous
+3. Speed of execution of List is slow compared to Arrays
+4. Lists occupy more space than Arrays
+
+How lists are stored in memory?
+1. Arrays create continuous memory bloc
+2. Whereas lists are Referential Array, i.e, list stores address of the data - since the address is stored, this removes that only homogenous data has to be stored. But this demands more space and time.
+
+Characteristic of list
+1. Lists are Ordered
+2. Lists are mutable unlike strings
+3. heterogeneous
+4. Items can be dulpicated
+5. Can be nested
+6. Dynamic
+7. Items can be accessed
+8. Can contain any kind of objects in list - functions, user functions, built in function etc
