@@ -1,4 +1,4 @@
 # pythonLearning
 This folder contains the learning of python <br>
 
-First Lecture completed (02/06)
+02/06 - completed 3 session
