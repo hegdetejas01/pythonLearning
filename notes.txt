@@ -98,13 +98,6 @@ Characteristics
 
 
 
-
-
-
-
-
-
-
 ################### DICTIOANRY ####################
 1. collection of key - value pair
 2. also called as maps or associative array in other languages

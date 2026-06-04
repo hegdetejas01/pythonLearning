@@ -114,20 +114,18 @@ class Fraction:
     def convertToDecimal(self):
         return self.numerator/self.denominator
 
-fr1 = Fraction(3,4)
-fr2 = Fraction(1,2)
-print(fr1, fr2)
+# fr1 = Fraction(3,4)
+# fr2 = Fraction(1,2)
+# print(fr1, fr2)
 
-a = fr1 + fr2
-b = fr1 - fr2
-c = fr1 * fr2
-d = fr1 / fr2
-print(a,b,c,d,sep="\n")
+# a = fr1 + fr2
+# b = fr1 - fr2
+# c = fr1 * fr2
+# d = fr1 / fr2
+# print(a,b,c,d,sep="\n")
 
-e = fr1.convertToDecimal()
-print(e)
-
-
+# e = fr1.convertToDecimal()
+# print(e)
 
 
 
@@ -136,5 +134,90 @@ print(e)
 
 
 
+# Write OOP classes to handle the following scenarios:
+# * A user can create and view 2D coordinates
+# * A user can find out the distance between 2 coordinates
+# * A user can find find the distance of a coordinate from origin
+# * A user can check if a point lies on a given line
+# * A user can find the distance between a given 2D point and a given line
+
+class Point:
+
+    def __init__(self,x=0,y=0):
+        self.xCord = x
+        self.yCord = y
+
+    def __str__(self):
+        return "<{}, {}>".format(self.xCord, self.yCord)
+    
+    def euclidianDistance(self, other):
+        # self = x1, y1
+        # other = x2, y2
+        # dist = sqrt(((x2-x1)^2) + ((y2-y1)^2))
+        return (((self.xCord - other.xCord)**2) + ((self.yCord - other.yCord)**2))**0.5
+    
+    def distanceFromOrigin(self):
+        dummy = Point(0,0) # creating class object inside a class
+        return self.euclidianDistance(dummy)
+        # return self.euclidianDistance(self, Point(0,0))
+
+    def pointOnLine(point, line): #self = point, other = line
+        if (line.a*point.xCord) + (line.b*point.yCord) + line.c == 0 :
+            return "Lies on the line"
+        else: return "Not on the line"
+
+# * A user can check if a point lies on a given line -> put the value of point in the line object
+class Line: # ax+by+c = 0
+
+    def __init__(self,a=1,b=1,c=0):
+        self.a, self.b, self.c = a, b, c
+
+    def __str__(self):
+        return "{}x + {}y + {} = 0".format(self.a, self.b, self.c)
+    
+    # def pointOnLine(self, other): 
+    def pointOnLine(line, point):
+        # line = self, other = point
+        if (line.a*point.xCord) + (line.b*point.yCord) + line.c == 0 :
+            return "Lies on the line"
+        else: return "Not on the line"
+
+    def shortestDist(line, point):
+        return (abs(line.a*point.xCord + line.b*point.yCord + line.c))/((line.a**2 + line.b**2)**0.5)
+    
+    def intersectionOfLines(self, other):
+        # determinant (D) = a1b2 - a2b1, if D = 0, then lines are parallel, else they intersect
+        # self = a1x + b1y + c1 = 0
+        # other = a2x + b2y + c2 = 0
+        if ((self.a * other.b) - (other.a * self.b) == 0):
+            return "The two lines don't intersect"
+        else: return "The two lines intersect"
 
 
+p1 = Point(1,1)
+p2 = Point(10,1)
+# print(p1, p2)
+# print(p1.euclidianDistance(p2))
+# print(p1.distanceFromOrigin())
+
+
+l1 = Line(1,1,-2)
+l2 = Line()
+# print(l1,l2)
+# print(l1.pointOnLine(p1)) # calls pointOnLine of the Line Class
+# print(l1.pointOnLine(p2))
+# print(Line().pointOnLine(Point()))
+
+# print(p1.pointOnLine(l1)) # calls pointOnLine of the Point Class
+# print(p2.pointOnLine(l1))
+
+l3 = Line(3,3,1)
+p3 = Point(2,1)
+# print(l3.shortestDist(p3))
+# print(Line(1,1,-2).shortestDist(Point(1,1)))
+
+l4 = Line(2,-3,1)
+l5 = Line(1,1,-7)
+l6 = Line(2,-3,-9)
+# print(l4.intersectionOfLines(l5))
+# print(l4.intersectionOfLines(l6))
