@@ -157,3 +157,91 @@ Benefits of functions
 1. code modularity
 2. code readability
 3. code reusability
+
+
+
+
+
+
+
+
+
+
+###########################################################################
+######################## OBJECT ORIENTED PROGRAMMING ######################
+###########################################################################
+
+1. Everything in python is an OBJECT
+2. OOP gives power the programmer to create his own datatype
+3. Principles - Object, Class, Polymorphism, Encapsulation, Inheritence, Abstraction
+
+############################ Class and Objects ############################
+
+1. Class is a blueprint on how the object of that class should behave
+2. Class contains of  
+    a. data or property
+    b. functions or behaviour
+
+3. Object is the instance of class
+4. Only the object of the class can access everything of that class
+
+Syntax to create an object
+--> objectName = className()
+eg. l = List()
+    hello = world()
+
+Constructor - It is a function inside the class
+--> def __init__(self): 
+--> variables/data/property should be written within the constructor
+--> it is a special method
+--> this function automatically executes when an object of this class is created. no explicit calling of this function is required
+--> control of the constructor is not with the user. whenever the obj is created it triggers automatically. therefore used for configuration related code when an app is opened  Eg. connect to db, connect to internet
+
+Functions within a class is called as METHOD
+eg. len(L) is a function because it is "outside" the list class
+    L.append(4) is a METHOD because it is "inside" the list class
+
++ (+ represents public - visible outside the class)
+- (- represents private - not visible outside the class)
+
+
+## self
+
+1. self is nothing but the object which calls the class function or data
+    print(id(self))
+    print(id(obj))
+    both id's are same
+
+2. obj.changePin()
+    this also send obj (currrent object) as a parameter to def changePin(self):
+    here obj = self
+
+3. self word can be replaced by other words as well
+
+
+############################ Magic Method ############################
+Also called as Dunder Methods
+It is a special kind of method 
+
+def __methodName__
+
+
+1. def __init__(self): --> this is a constructor
+2. def __str__(self): --> when a object is put inside a print function, this peice of code gets triggered
+3. def __add__(self, other): --> automatically gets triggered when addition is performed between the objects of the same class
+4. def __sub__(self, other): 
+5. def __mul__(self,other):
+6. def __truediv__(self, other): 
+
+
+
+
+
+
+
+
+
+
+
+
+
