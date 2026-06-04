@@ -56,3 +56,38 @@ Characteristic of list
 6. Dynamic
 7. Items can be accessed
 8. Can contain any kind of objects in list - functions, user functions, built in function etc
+
+
+
+################# TUPLES ##################
+
+Same as list, except that tuple is immutable whereas as lists are mutable
+Tuple is immutable list
+
+Characteristics
+1. Ordered
+2. Immutable
+3. Allows Duplicates
+
+Tuples are faster than list since it is immutable
+Tuples take less memory then list
+Built in function is more in list
+List is more error prone compared to list
+
+
+
+
+
+
+############ SETS ###############
+
+Set is an unordered collection of items. 
+Everyset element is unique and must be immutable.
+However sets are mutable
+
+Characteristics
+1. unordered
+2. mutable
+3. no Duplicates
+4. can't contain mutable datatypes
+5. sets are mutable
