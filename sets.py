@@ -125,8 +125,66 @@ print(min(s1))
 print(max(s1))
 print(sorted(s1, reverse=True)) ## Gives the result in List
 
+s1 = {1,2,3,4,5}
+s2 = {4,5,6,7}
 print(s1.union(s2)) # s1 | s2
 
 s1.update(s2) # s1 = s1 | s2
 print(s1)
 print(s2)
+
+s1 = {1,2,3,4,5}
+s2 = {4,5,6,7}
+s1.intersection(s2) # s1 & s2
+s1.intersection_update(s2) # s1 = s1 & s2
+
+"""
+
+difference and difference_update
+symmetric_difference and symmetric_difference_update
+
+"""
+
+# isdisjoint / issubset / issuperset
+s1 = {1,2,3,4,5}
+s2 = {4,5,6,7}
+print(s1.isdisjoint(s2)) # False
+
+s1 = {1,2,3,4,5}
+s2 = {6,7}
+print(s1.isdisjoint(s2)) # True
+
+s1 = {1,2,3,4,5}
+s2 = {4,5}
+print(s1.issubset(s2)) # S1 is not the subset of S2
+print(s2.issubset(s1)) # S2 is the subset of S1
+
+print(s1.issuperset(s2)) # s1 is superset of s1
+
+s1 = {1,2,4}
+s2 = s1.copy() #shallow copy
+
+
+
+########### FROZEN SET ############
+# It is an immutable version of python set
+
+fs1 = frozenset([1,2,3])
+fs2 = frozenset((1,2,3))
+fs3 = frozenset({1,2,3})
+print(fs1, fs2, fs3, sep="\n")
+
+# union, intersection, diff, symmetric diff - all works with frozenset
+# add and delete functions donot work
+# use frozen set when the application is read only
+
+fs = frozenset([1,2,frozenset[3,4]]) # 2D frozenset
+print(fs)
+
+
+
+
+############# Comprehension ##############
+res = {i**2 for i in range(1,11)}
+print(res)
+

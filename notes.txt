@@ -91,3 +91,27 @@ Characteristics
 3. no Duplicates
 4. can't contain mutable datatypes
 5. sets are mutable
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+################### DICTIOANRY ####################
+1. collection of key - value pair
+2. also called as maps or associative array in other languages
+
+Characteristics
+1. mutable
+2. indexing has no meaning
+3. key can't be repeated
+4. key can't be mutable datatype
+5. unordered
