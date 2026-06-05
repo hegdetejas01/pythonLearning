@@ -134,8 +134,59 @@ c3 = Atm()
 print(c1.cid, c2.cid, c3.cid)
 print(Atm.getCounter())
 
-
 # Atm.counter = 'hello'
 # c1 = Atm()  --> creates error because counter is now a string. therefore make it private
-
 print(Atm.getCounter())
+
+
+
+
+
+
+
+########################## CLASS RELATIONSHIPS ########################
+## AGGREGATION and INHERITANCE
+
+# Aggregation means has a relationship
+# here one class owns the other class
+# eg - customer has a address, here customer class owns address class
+# private variable can't be printed (can be printed with a get)
+
+class Customer:
+
+    def __init__(self,name,gender,address):
+        self.name = name
+        self.gender = gender
+        self.address = address
+
+    def print_address(self):
+        print(self.address.getCity(), self.address.pin, self.address.state)
+
+    def editProfile(self, newName, newCity, newPin, newState):
+        self.name = newName
+        self.address.editAddress(newCity, newPin, newState)
+
+class Address:
+
+    def __init__(self, city, pin, state):
+        self.__city = city
+        self.pin = pin
+        self.state = state
+
+    def getCity(self):
+        return self.__city
+    
+    def editAddress(self, newCity, newPin, newState):
+        self.__city = newCity
+        self.pin = newPin
+        self.state = newState
+
+add1 = Address('shimoga',577205,'karnataka')
+cust1 = Customer('tejas','male',add1)
+cust1.print_address()
+
+cust1.editProfile('tejaswini','chennai',123456,'tamilnadu')
+cust1.print_address()
+
+
+### Inheritence - oop4.py
