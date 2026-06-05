@@ -221,3 +221,105 @@ l5 = Line(1,1,-7)
 l6 = Line(2,-3,-9)
 # print(l4.intersectionOfLines(l5))
 # print(l4.intersectionOfLines(l6))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# How objects access attributes
+
+class Person:
+
+    def __init__(self, name, country):
+        self.name, self.country = name, country
+
+    def greet(self):
+        if self.country.lower() == 'india':
+            return "Namaste, {}".format(self.name.capitalize())
+        else: return "Hello, {}".format(self.name)
+
+p = Person('tejas','India')
+print(p.country) # accessing the attributes
+print(p.greet()) # accessing the methods
+# p.hello  --> throws error because hello as an attribute is not present in Person Class
+p.gender = 'male' # creating attributes from outside of the class
+print(p.gender)
+
+
+
+################### Reference Variable ####################
+
+class Person:
+
+    def __init__(self):
+        self.name = 'Tejas'
+        self.gender = 'Male'
+
+p = Person() # creating an object of Person
+print(Person()) # no variable
+# p is the reference of the object. p is not the object. It contains the reference of the object that has been created
+
+q = p # both point to the same object
+# any editing on any object, changes the data within both object
+print(id(p))
+print(id(q))
+
+print(p.name)
+print(q.name)
+q.name = 'hegde'
+print(p.name)
+print(q.name)
+
+
+
+
+########################## Pass By Reference ########################
+
+class Person:
+
+    def __init__(self, name, gender):
+        self.name = name
+        self.gender = gender
+
+def greet(person): # this is a function (not a method)
+    # Function recieving object as input to this function
+    print('my name is', person.name, 'and i am a', person.gender)
+    p1 = Person('tejaswini','female')
+    return p1 
+    # Function returning Object
+
+p = Person('tejas','male')
+x = greet(p)
+print(x.name, x.gender)
+
+
+
+
+####################
+class Person:
+
+    def __init__(self, name, gender):
+        self.name = name
+        self.gender = gender
+
+def greet(person):
+    # person has same id as p which is outside the function.
+    # that is, address is passed and not the object
+    # therefore when i change the name of person within this class, it reflects the same even outside the class when p.name is printed
+    print(id(person))
+    person.name = 'hello'
+    print('my name is', person.name, 'and i am a', person.gender)
+
+p = Person('tejas','male')
+print(id(p))
+greet(p)
+print(p.name) # p.name is changed because of greet function
