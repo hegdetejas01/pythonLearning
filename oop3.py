@@ -56,7 +56,9 @@ class Atm:
         # self.vairableName is INSTANCE variable
 
     @staticmethod
-    def getCounter(): # this is not using self inside the code and hence not given as parameter
+    def getCounter(): 
+        # this is not using self inside the code and hence not given as parameter
+        # they donot require object to call them
         # this method is called using class name and not with the object
         # eg. Atm.getCounter()
         # such methods are called as static methods
