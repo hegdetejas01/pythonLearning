@@ -1,5 +1,10 @@
 ## creating dict
 
+
+# KEY in dictionary can't be mutable datatype
+# Why should be the key a immutable datatype?? 
+# because dictionary uses hashing on keys to find out where to store the items - if the key is mutable, then the hash function for that key should also change and a new place in the memory should be alloted to all the items in the dictionary which takes a lot of time.
+
 d1 = {}
 d2 = {'name':'tejas','gender':'male'} # 1D-homogeneous
 d3 = {'name':'tejas','gender':'male', (1,2,3):'okya'} #1D-heterogeneous

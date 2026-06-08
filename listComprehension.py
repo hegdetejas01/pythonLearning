@@ -104,3 +104,36 @@ print([i+j for i,j in zip(l1,l2)])
 l1 = [1,2,3] # this decides the lenght of the ziped list
 l2 = [1,2,3,4,5,6]
 print(list(zip(l1,l2)))
+
+
+
+
+
+
+
+
+####################################################
+#################### ENUMERATOR ####################
+####################################################
+
+# the enumerate() method adds a counter to an iterable and returns it (the enumerate object)
+l = ['a','b','c','d']
+x = enumerate(l)
+print(x)
+y = list(x)
+print(y)
+
+
+l = ['a','b','c','d']
+x = list(enumerate(l, start=11)) # [(11, 'a'), (12, 'b'), (13, 'c'), (14, 'd')]
+print(x)
+
+
+l = [('tejas',32), ('hello',12), ('world',19), ('good', 9)]
+# sort this based on the first item
+print(sorted(l))
+print(sorted(l, reverse=True))
+
+# sort this based on the second item
+print(sorted(l,key=lambda x:x[1])) # this lambda function tells to sort based on second item, i.e, item at index 1
+print(sorted(l, key=lambda x:x[1], reverse=True))

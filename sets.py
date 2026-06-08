@@ -188,3 +188,18 @@ print(fs)
 res = {i**2 for i in range(1,11)}
 print(res)
 
+
+
+
+
+### How indexing works in sets
+
+# it is based on HASHING
+# hash function
+# it held in finding out the index position where the data has to be stored - this changes the order of the items in the set - hence it becomes unordered
+
+# in array, searching happens in o(n)
+# whereas in sets (and also in dictionary), it happens in o(1)
+
+s = {1,4,12,43,54,15}
+print(s)
