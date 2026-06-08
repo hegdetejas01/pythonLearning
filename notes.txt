@@ -253,6 +253,27 @@ def __methodName__
 
 
 
+########################## File Handling ##########################
+
+## Types of data for i/o
+1. Text
+2. Binary
+
+# 3 steps with file operation
+1. open
+2. read write
+3. close
+
+# f = open() 
+python picks the file and loads into RAM 
+to the buffer memory, where the file is read character by character
+when the file is closed, it is loaded on to harddrive
+
+
+
+Disadvantages of using Text Files
+1. Can't work on binary files like images
+2. Not good for other datatypes like int, float, list, tuples. Writing has to be done only with String
 
 
 
