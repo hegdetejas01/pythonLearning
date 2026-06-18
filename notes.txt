@@ -282,3 +282,39 @@ Disadvantages of using Text Files
 
 
 
+###########################################################
+There are 2 stages where errror can happen in a program
+1. During Compilation -> Syntax Error
+2. During execution -> Exception
+
+### Syntax Error
+* Somthing in the program is not written as per language rules.
+* Error is raised by interpretor or compiler
+
+1. indentation error
+2. index error - accessing at the undefined index
+3. Module not find error
+4. key error - when the key is not found (eg. in dictionary)
+5. type error
+6. value error - functions arguement is of incorrect type
+7. name error
+8. attribute error
+
+
+
+### Exceptions
+1. happens at runtime
+2. if things go wrong during execution
+3. it is the logical error
+4. it is raised by a python runtime
+5. tackle it on the fly
+
+Eg.
+1. Memory overflow
+2. divide by zero error
+3. Database error
+
+Handled by Try Except Blocks :-
+It helps to improve user experience
+It helps to have security, because stacktrace (error message shows codes, error on which line etc)
+
