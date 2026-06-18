@@ -1,0 +1,1 @@
+{'name': 'tejas', 'age': 23, 'place': 'karnataka'}

@@ -24,8 +24,7 @@ f.close()
 
 # Write in a file which is already present
 f = open(file,'a') # append mode
-f.write("I am fine\nI am doing great\n\n" \
-"")
+f.write("I am fine\nI am doing great\n\n")
 f.close()
 
 
@@ -45,7 +44,7 @@ s = f.read()
 f.close()
 print(s)
 
-# reading only 10 character
+# reading only 15 character
 f = open(file,'r')
 s = f.read(15) # reads only 15 character
 print(s)
@@ -92,7 +91,7 @@ with open(file,'r') as f:
 
     # this helps to read very big files in memory
 
-bigL = ["hello world\n" for i in range(50)]
+bigL = ["hello world\n" for i in range(500)]
 bigL.insert(0,'1\n')
 newFileHandle = open("fileHandling1/newfile.txt",'w')
 
@@ -143,9 +142,3 @@ with open(file,'w') as f:
     f.write("Hello")
     f.seek(0) # cursor reset to 0
     f.write('X') # H will be replaced by X
-
-
-
-
-
-

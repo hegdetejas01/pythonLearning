@@ -1,0 +1,144 @@
+# Text files wont work with binary files
+# working with files is not a good type to work with other data types in python - like dictionary, tuples, integers etc
+# Everything in the files will be stored in Text Format (String) - reading, writing everything should be in string
+
+
+file = "fileHandling2/ss1.png"
+
+with open(file, 'r') as f:
+#   f.read() # This throws error, because image can't be processed
+    pass
+
+
+# Creating a copy of image - ss.png 
+with open(file, 'rb') as rf: # read binary = rb, here it reads binary data from the image
+    with open('fileHandling2/ss_copy.png','wb') as wf: # Write binary
+        wf.write(rf.read())
+
+file = "fileHandling2/sample1.txt"
+d = {
+    'name' : 'tejas',
+    'age' : 23,
+    'place' : 'karnataka'
+}
+
+with open(file,'w') as f:
+    # f.write(d) --> This throws error because d should in string
+    f.write(str(d)) # But now the data can't be accessed in Key Value Pair and reconverting  back to dictionary is not possible
+# solution - serialization and deserialization
+
+
+
+
+
+####################### serialization and deserialization ######################
+## Serialization - it is a process of converting to python datatype to JSON format
+## Deserialization - [JSON] -> [Python Datatype]
+
+## JSON - Javascript on notation, it is an univeral language that can be understood by all programming language
+import json
+
+file = "fileHandling2/sample2.json"
+
+l = [1,2,3,4,2,3,4,'\n']
+with open(file,'w') as f:
+    json.dump(l,f,indent=4) # what to dump(serialize) and file handler
+
+
+file = "fileHandling2/sample3.json"
+d = {
+    'name' : 'tejas',
+    'age' : 23,
+    'place' : 'karnataka'
+}
+with open(file,'w') as f:
+    json.dump(d,f,indent='\n')
+
+with open(file,'r') as f:
+    d = json.load(f) # Printing the dictionary
+print(d)
+print(type(d)) # dictionary
+
+
+file = "fileHandling2/sample2.json"
+with open(file,'r') as f:
+    d = json.load(f) # Printing the dictionary
+print(d)
+print(type(d)) # list
+
+
+
+
+### With Tuple
+t = (1,2,31,2,3)
+with open(file, 'w') as f:
+    json.dump(t,f) # this is stored as LIST and not as a tuple
+
+
+### Serialization and Deserialisation on Custom Objects
+
+class Tejas:
+    def __init__(self):
+        self.name = "tejas"
+        self.age = 34
+        self.gender = 'm'
+        self.place = "Bangalore"
+
+tejas = Tejas()
+
+
+def showObjectAs1(obj):
+    if isinstance(obj, Tejas):
+        return "{} --> {} --> {} --> {}".format(obj.name, obj.age, obj.gender, obj.place)
+    
+def showObjectAs2(obj):
+    if isinstance(obj, Tejas):
+        return {
+            'name':obj.name,
+            'gender':obj.gender,
+            'age':obj.age,
+            'place':obj.place
+        }
+
+    
+with open('fileHandling2/sample4.json','w') as f:
+    # json.dump(tejas,f)  --->  Throws error, because object can't be serialized in this way
+    # Python wants us to specify how this data object should be serialized
+    json.dump(tejas,f,default=showObjectAs1,indent=4)
+
+
+with open('fileHandling2/sample5.json','w') as f:
+    json.dump(tejas,f,default=showObjectAs2,indent=4)
+
+with open('fileHandling2/sample5.json','r') as f:
+    d = json.load(f)
+    print(d)
+    print(type(d))
+
+### But what if i want entire onject to be stored in the file and retrive it and perform the function of the class on it
+# This can be done by conveting it to binary
+
+## PICKLING ##
+# It is a process where a object is converted to byte stream, unpickling is a reverse process [byte stream] --> [object]
+
+class Tejas:
+    def __init__(self):
+        self.name = "tejas"
+        self.age = 34
+        self.gender = 'm'
+        self.place = "Bangalore"
+    
+    def showInfo(self):
+        print("Hello, I am {} and I am from {}".format(self.name, self.place))
+
+tejas = Tejas()
+
+
+import pickle
+with open("fileHandling2/sample6.pkl",'wb') as f: # in binary
+    pickle.dump(tejas, f)
+
+with open("fileHandling2/sample6.pkl",'rb') as f:
+    person = pickle.load(f) # now i can perform all the function of Tejas Class on this person
+    
+person.showInfo()
