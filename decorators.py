@@ -88,7 +88,7 @@ greet()
 def sanityCheck(datatype):
     def outerWrapper(fun):
         def innerWrapper(*args):
-            if type(args[0]) == datatype :
+            if type(*args) == datatype :
                 fun(*args)
             else: print("This datatype isn't supported")
         return innerWrapper
