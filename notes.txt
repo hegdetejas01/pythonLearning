@@ -318,3 +318,29 @@ Handled by Try Except Blocks :-
 It helps to improve user experience
 It helps to have security, because stacktrace (error message shows codes, error on which line etc)
 
+
+
+
+########################## NAMESPACES ##########################
+
+It is a space that holds names(identifiers). It is a dictionary of identifiers(keys) and their objects(values)
+
+4 types of Namespaces:
+1. Built-in, 2. Global, 3. Enclosing, 4. Local
+
+* Scope - it is a textual region in python where a Namespace is directly accessible.
+* LEGB Rule - the interpretor searches for a name from inside out, looking for local to builtin scope. If the interpretor doesn't find the name, then a NameError exception will be raised
+
+
+
+
+
+########################## DECORATORS ##########################
+
+A decorator in python is a function that recieves another function as input and adds some other functionality(decoration) to it and returns it
+
+This happens because python functions are first class citizens
+
+2 types of decorators - 
+1. built in decorators = @abstractmethod, @staticmethod
+2. user defines decorators 
