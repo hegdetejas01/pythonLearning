@@ -50,34 +50,34 @@ greet()
 
 
 ### Printing executing time of a function using decorators
-# import time
+import time
 
-# def timer(fun):
-#     def wrapper(*args):
-#         start = time.time()
-#         fun(*args)
-#         end = time.time()
-#         print("Time taken by the",fun.__name__," is", end-start, "secs")
-#     return wrapper
+def timer(fun):
+    def wrapper(*args):
+        start = time.time()
+        fun(*args)
+        end = time.time()
+        print("Time taken by the",fun.__name__," is", end-start, "secs")
+    return wrapper
 
-# @timer
-# def greet():
-#     print("Hello world")
-#     time.sleep(1)
+@timer
+def greet():
+    print("Hello world")
+    time.sleep(1)
 
-# @timer
-# def square(num):
-#     print(num**2)
-#     time.sleep(1)
+@timer
+def square(num):
+    print(num**2)
+    time.sleep(1)
 
-# @timer
-# def power(a,b):
-#     print(a**b)
-#     time.sleep(1)
+@timer
+def power(a,b):
+    print(a**b)
+    time.sleep(1)
 
-# greet()
-# square(21)
-# power(123,12)
+greet()
+square(21)
+power(123,12)
 
 
 

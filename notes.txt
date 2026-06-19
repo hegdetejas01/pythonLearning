@@ -344,3 +344,18 @@ This happens because python functions are first class citizens
 2 types of decorators - 
 1. built in decorators = @abstractmethod, @staticmethod
 2. user defines decorators 
+
+
+
+
+########################## Iterators ##########################
+1. Iteration - taking each item of something one after another
+2. Iterator - it is an object that allows the programmer to traverse through a sequence without having to store the entire data in the memory
+3. Iterable - it is an object which one can iterate over. It generates an iterator when passed to iter() method
+
+* Every iterator is also an Iterable
+* not all iterables are Iterators
+
+* every iterable has an iter function = for loop or if dir of that object has a __iter__ method
+* every iterator has both iter function and next function
+
