@@ -100,6 +100,13 @@ print("Turns = ",count)
 
 pop = 10000
 
+for i in range(10,0,-1):
+    print(i,pop)
+    pop = pop/1.1
+
+#ORR
+pop = 10000
+
 for i in range(0,10):
     pop = 1.1 * pop
     pop = pop//1
