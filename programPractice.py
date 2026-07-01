@@ -80,7 +80,7 @@ num = r.randint(1,100)
 guess = int(input("Enter the number: "))
 count = 1
 
-while num != guess:
+while guess != num:
     if guess < num: 
         print("Wrong, guess higher")
     else:
