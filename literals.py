@@ -41,3 +41,8 @@ a = True + 4 # True = 1
 b = False - 10 # False = 0
 print()
 print(a, b, sep="\n")
+
+
+#special literal
+a = None
+print(a)
