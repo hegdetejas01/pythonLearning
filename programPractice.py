@@ -12,7 +12,7 @@ print(int(input("Enter First Num: ")) + int(input("Enter Second Num: ")))
 
 
 
-# Get input from user, and add the digits
+# Get 3 digit input from user, and add the digits
 
 number = int(input("Enter a 3 digit number: "))
 a = number%10
