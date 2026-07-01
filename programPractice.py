@@ -104,6 +104,7 @@ for i in range(10,0,-1):
     print(i,pop)
     pop = pop/1.1
 
+
 #ORR
 pop = 10000
 
