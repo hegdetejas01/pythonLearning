@@ -26,7 +26,7 @@
 # 8. Can contain any kind of objects in list
 
 
-# Creating a list
+## Creating a list
 print([]) #empty list
 print([1,2,3]) #1D homogeneous
 print([1,2,3,[4,6]]) #2D heterogeneous
@@ -35,7 +35,9 @@ print([1,2,3.5,"Hello",5+8j]) #Heterogeneous
 print(list('hello'))
 
 
+## Accessing items from a list
 
+# Positive and negative indexing
 l = [1,2,3,4,5,6,7]
 print(l[0])
 print(l[4])
@@ -53,7 +55,7 @@ print(l[1][0][0])
 
 
 
-
+# slicing
 l = [1,2,3,4,5,6,7,8,9]
 print(l[:3])
 print(l[-3:])
@@ -62,7 +64,7 @@ print(l[0::2])
 
 
 
-
+## Adding items to a list
 l = [1,2,3,4]
 l.append(5) # append adds ONE value at the end of the list
 m = [1,2,3,4]
@@ -81,18 +83,20 @@ print(l)
 
 
 
-
+## Editing items in a list
+# Editing with indexing
 l = [1,2,3,4,5]
 l[1] = 500
 print(l)
 
+# Editing with slicing
 l = [1,2,3,4,5,6]
-l[1:4] = [200,300]
+l[1:4] = [200,300,400]
 print(l)
 
 
 
-
+## Deleting items from a list (del, remove, pop, clear)
 l = [1,2,3,4,5,6]
 del l
 # print(l) ----> This throws error because l doesn't exist anymore
@@ -104,7 +108,7 @@ print(l)
 l = [1,2,3,4,5,6,7]
 del l[2:5]
 print(l)
-
+ 
 l = [1,2,3,4,5,6,7]
 l.remove(3) # remove function works on values, i.e, here it removes the value 3 from the list
 print(l)
