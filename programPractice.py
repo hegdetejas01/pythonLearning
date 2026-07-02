@@ -146,6 +146,7 @@ print(sum)
 
 # Sum of sequence till nth term
 # 1/1! + 2/2! + 3/3! + ....
+
 n = int(input("enter n: "))
 sum = 0
 factorial = 1
@@ -160,6 +161,7 @@ print(sum)
 
 
 # Print Pattern
+
 n = int(input("Enter the number of rows: "))
 for i in range(1,n+1):
     for j in range(1,i+1):
@@ -174,6 +176,7 @@ for i in range(1,n+1):
 
 
 # Print prime number between a range
+
 lowerNum = int(input("Enter the lower number: "))
 upperNum = int(input("Enter the upper number: "))
 
@@ -192,6 +195,7 @@ for i in range(lowerNum, upperNum+1):
 
 
 # Find length of a str without using len()
+
 s = input("Enter the string: ")
 count = 0
 for i in s:
@@ -202,6 +206,7 @@ print(count)
 
 
 # Extract username from email, (the part before @)
+
 email = "tejashegde@gmail.com"
 pos = email.find('@')
 print(email[:pos])
@@ -210,6 +215,7 @@ print(email[:pos])
 
 
 # Count the frequency of a particluae character in a provided string
+
 s = input("Enter the string: ")
 search = input("What would you like to search: ")
 count = 0
@@ -222,6 +228,7 @@ print("Frequency: ", count)
 
 
 # Write a prog to remove a perticular char from a strong
+
 s = input("Enter the string: ")
 c = input("Enter the char to remove from the string: ")
 r = ""
@@ -234,6 +241,7 @@ print(r)
 
 
 # Check palindrome string
+
 s = input("Please enter the string: ")
 sr = s[::-1]
 if s == sr:
@@ -290,6 +298,7 @@ else:
 
 
 # Write a program to conver a string to title case without using the title()
+
 s = input("Please enter the string: ")
 L = []
 for i in s.split():
@@ -301,3 +310,13 @@ print(" ".join(L))
 
 
 # Write a program that can convert an integer to string
+
+number = int(input("Enter a number: "))
+digits = '0123456789'
+result = ''
+while number != 0:
+    result = digits[number % 10] + result
+    number = number//10
+
+print(result)
+print(type(result))
