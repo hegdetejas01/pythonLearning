@@ -1,5 +1,6 @@
 # Strings - collection of character which are unicodes (not ascii)
 
+#Creating Strings
 s1 = "Hello" # Creation of string
 s2 = 'Hello'
 s3 = """
@@ -20,6 +21,7 @@ s8 = str(4)
 print(s8)
 
 
+#Accessing substrings from a string
 s9 = "Hello World"
 for i in s9:
     print(i)
@@ -29,7 +31,7 @@ for i in range(0,len(s9)):
 
 print(s9[10])
 
-# Negative indexing
+## Negative indexing
 print()
 s9 = "Hello World"
 print(s9[-1])
@@ -37,17 +39,18 @@ print(s9[-2])
 print(s9[-3])
 
 
-# slicing
+## slicing
 s9 = "Hello World"
 print(s9[0:5])
 print(s9[2:3])
 print(s9[3:])
 print(s9[:7])
+print(s9[:])
 print(s9[2:len(s9):2])
 print(s9[6:0:-1])
 print(s9[::-1]) # reversing a string
 
-# slicing with negative indexing
+## slicing with negative indexing
 s9 = "Hello World"
 print(s9[-5:-1])
 print(s9[-1:-7:-1])
