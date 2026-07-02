@@ -157,7 +157,6 @@ print(sen1, sen2, sen3, sen4, sep="\n")
 
 
 
-
 print("abcd123".isalnum())
 print("abcd123%".isalnum())
 print("abcd".isalpha())
