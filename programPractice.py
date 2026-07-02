@@ -216,7 +216,7 @@ count = 0
 for i in s:
     if i == search:
         count += 1
-prnt("Frequency: ", count)
+print("Frequency: ", count)
 
 
 
