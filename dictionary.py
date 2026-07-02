@@ -15,7 +15,7 @@
 # because dictionary uses hashing on keys to find out where to store the items - if the key is mutable, then the hash function for that key should also change and a new place in the memory should be alloted to all the items in the dictionary which takes a lot of time.
 
 
-## creating dict
+#### creating dict
 
 d1 = {} # empty dictionary
 d2 = {'name':'tejas','gender':'male'} # 1D-homogeneous
@@ -35,10 +35,18 @@ print(d4)
 
 d5 = dict([(1,2),(3,4),(5,6)])
 print(d5)
-d6 = dict(((1,2),(3,4),(5,6)))
+d6 = dict([('name','tejas'),('age',25),(3,3)])
 print(d6)
+d7 = dict(((1,2),(3,4),(5,6)))
+print(d7)
 
 # if key is not unique, then that key will hold the latest value
+d8 = {'name':'tejas','name':'rahul'}
+print(d8)
+
+# mutable items as keys
+d9 = {'name':'tejas', [1,2,3]:2} # throws error
+
 
 
 ###### Accessing the dict #######
