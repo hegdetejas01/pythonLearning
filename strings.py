@@ -1,7 +1,7 @@
 # Strings - collection of character which are unicodes (not ascii)
 
-# Creating Strings
-s1 = "Hello" # Creation of string
+### Creation of string
+s1 = "Hello" 
 s2 = 'Hello'
 s3 = """
 Hello
@@ -21,7 +21,7 @@ s8 = str(4)
 print(s8)
 
 
-# Accessing substrings from a string
+### Accessing substrings from a string
 s9 = "Hello World"
 for i in s9:
     print(i)
@@ -31,7 +31,7 @@ for i in range(0,len(s9)):
 
 print(s9[10])
 
-## Negative indexing
+# Negative indexing
 print()
 s9 = "Hello World"
 print(s9[-1])
@@ -39,7 +39,7 @@ print(s9[-2])
 print(s9[-3])
 
 
-## slicing
+# slicing
 s9 = "Hello World"
 print(s9[0:5])
 print(s9[2:3])
@@ -51,13 +51,13 @@ print(s9[6:0:-1])
 print(s9[::-1]) # reversing a string
 
 
-## slicing with negative indexing
+# slicing with negative indexing
 s9 = "Hello World"
 print(s9[-5:-1])
 print(s9[-1:-7:-1])
 
 
-# Editing and deleting in strings
+### Editing and deleting in strings
 s = "hello world"
 # s[0] = 'H' -----> This throws error because python strings are immutable
 # print(s)
@@ -66,19 +66,19 @@ del s
 # print(s)  ---> This throws error because s is already deleted
 
 
-# Operations on strings
-## Airthmatic operation - addition and multiplication
+### Operations on strings
+# Airthmatic operation - addition and multiplication
 print('delhi'+' bangalore')
 print('delhi ' * 5)
 
-## Relational operation (comapring strings lexiographically -> comparing based on ASCII values)
+# Relational operation (comapring strings lexiographically -> comparing based on ASCII values)
 print('delhi' == 'mumbai')
 print('delhi' == 'delhi')
 print('delhi' > 'pune')
 print('D' > 'd')
 
 
-## Logical operation
+# Logical operation
 
 # Empty strings are considered as FALSE
 # if a string has characters, it is considered as TRUE
@@ -93,7 +93,7 @@ print(not 'hello')
 
 
 
-## Loops
+# Loops
 for i in 'hello':
     print(i)
 
@@ -101,7 +101,7 @@ for i in 'delhi':
     print('pune') # prints pune 5 times
 
 
-## Membership operation
+# Membership operation
 print('d' in 'Delhi')
 print('D' not in 'Delhi')
 
