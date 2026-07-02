@@ -39,6 +39,13 @@ print(t)
 # same as lists and string
 # Contents - positive indexing, negative indexing, slicing, indexing of 2D tuple
 
+t = (1,2,3,4)
+print(t[0])
+print(t[-1])
+print(t[0:4])
+print(t[0:4:2])
+print(t[-3:-1])
+
 
 
 ### Editing items in tuple
