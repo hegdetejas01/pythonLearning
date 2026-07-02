@@ -214,3 +214,20 @@ for i in l:
 l = [1,2,3,4,5]
 for i in range(0,len(l)):
     print(l[i])
+
+
+### Disadvantages of Python lists
+slow, risky usage, eats up more memory
+
+# Risky usage
+a = [1,2,3]
+b = a
+print(a,b)
+a.append(4)
+print(a,b) #bcoz lists are mutable
+
+a = [1,2,3]
+b = a.copy()
+print(a,b)
+a.append(4)
+print(a,b)
