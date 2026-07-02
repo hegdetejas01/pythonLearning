@@ -12,7 +12,7 @@
 # list is more error prone compared to list
 
 
-## Creating tuples
+### Creating tuples
 t = () # creating empty tuple
 
 # printing tuple with one element
