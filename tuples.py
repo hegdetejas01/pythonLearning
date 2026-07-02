@@ -6,6 +6,9 @@
 # 2. Immutable
 # 3. Allows Duplicates
 
+# Diff between Lists and Tuples
+# Syntax
+# Mutability
 # Tuples are faster than list since it is immutable
 # Tuples take less memory then list
 # Built in function is more in list
@@ -82,6 +85,7 @@ for i in t1:
 
 ### Function
 
+t1 = (1,2,3,4)
 print(len(t1))
 print(sum(t1))
 print(min(t1))
