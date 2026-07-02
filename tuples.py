@@ -46,7 +46,8 @@ print(t[0:4])
 print(t[0:4:2])
 print(t[-3:-1])
 
-
+t = (1,2,3,(4,5))
+print(t[-1][0])
 
 ### Editing items in tuple
 t = (1,2,3)
