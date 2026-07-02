@@ -274,7 +274,7 @@ print(L)
 print(count)
 
 
-
+#ORR
 s = input("Please enter the string: ").strip()
 if not s:
     print(0)
@@ -285,3 +285,19 @@ else:
             count += 1
 
     print(count+1)
+
+
+
+
+# Write a program to conver a string to title case without using the title()
+s = input("Please enter the string: ")
+L = []
+for i in s.split():
+    L.append(i[0].upper() + i[1:].lower())
+    
+print(" ".join(L))  
+
+
+
+
+# Write a program that can convert an integer to string
