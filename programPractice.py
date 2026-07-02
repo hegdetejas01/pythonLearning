@@ -211,7 +211,7 @@ print(email[:pos])
 
 # Count the frequency of a particluae character in a provided string
 s = input("Enter the string: ")
-search = input("What would you like to search")
+search = input("What would you like to search: ")
 count = 0
 for i in s:
     if i == search:
