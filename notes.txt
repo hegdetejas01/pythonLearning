@@ -117,6 +117,10 @@ Characteristics
 
 Helps in code reusability
 
+2 types of function
+1. Buil it
+2. User defined 
+
 2 principles of function:
 1. Abstraction
 2. Decomposition
