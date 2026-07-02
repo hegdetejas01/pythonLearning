@@ -23,7 +23,7 @@
 # 5. Can be nested
 # 6. Dynamic
 # 7. Items can be accessed
-# 8. Can contain any kind of objects in list
+# 8. Can contain any kind of objects in list -> L = [1,2,print,type,input]
 
 
 ## Creating a list
