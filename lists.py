@@ -26,10 +26,11 @@
 # 8. Can contain any kind of objects in list
 
 
-
+# Creating a list
 print([]) #empty list
-print([1,2,3]) #1D homogenous
+print([1,2,3]) #1D homogeneous
 print([1,2,3,[4,6]]) #2D heterogeneous
+print([[[1,2],[3,4]],[[5,6],[7,8]]]) #3D homogeneous
 print([1,2,3.5,"Hello",5+8j]) #Heterogeneous
 print(list('hello'))
 
