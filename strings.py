@@ -81,7 +81,7 @@ print('D' > 'd')
 ## Logical operation
 
 # Empty strings are considered as FALSE
-# is a string has characters, it is considered as TRUE
+# if a string has characters, it is considered as TRUE
 print('' and 'hello') # similar to 0 and 1, answer = 0 = ''
 print('' or 'hello') # similar to 0 or 1, answer = 1 = 'hello'
 
