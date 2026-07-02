@@ -46,7 +46,7 @@ print(s1 == s2) # True - because tuple is unordered
 ### Accessing the elements - elements can't be accessed by indexing or slicing
 
 
-### Editing the items - not allowed
+### Editing the items - not allowed - Indexing doesn't work hence editing also won't work
 
 
 ### Adding/Updating items into set
