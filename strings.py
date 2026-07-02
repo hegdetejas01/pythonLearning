@@ -157,13 +157,13 @@ print(sen1, sen2, sen3, sen4, sep="\n")
 
 
 
-# isalnum
+
 print("abcd123".isalnum())
 print("abcd123%".isalnum())
 print("abcd".isalpha())
 print("abcd123".isdigit())
 print("123".isdigit())
-
+print("1name".isidentifier())
 
 
 # SPLIT and JOIN
