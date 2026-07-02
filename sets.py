@@ -186,8 +186,9 @@ fs2 = frozenset((1,2,3))
 fs3 = frozenset({1,2,3})
 print(fs1, fs2, fs3, sep="\n")
 
-# union, intersection, diff, symmetric diff - all works with frozenset
-# add and delete functions donot work
+# all read functions work and write functions won't work on frozenset
+# union, intersection, diff, symmetric diff, issubset, isdisjoint, issuperset - all works with frozenset
+# add and delete functions donot work - pop, remove, discard, update, add
 # use frozen set when the application is read only
 
 fs = frozenset([1,2,frozenset[3,4]]) # 2D frozenset
