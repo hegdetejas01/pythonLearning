@@ -52,7 +52,7 @@ print(result)
 
 ### Nested ifs with list comprehension
 
-# make new list from myfruit if it item is present in basket and also starts with 'a'
+# make new list from myfruit if item is present in basket and also starts with 'a'
 basket = ['apple','cherry','almond','guava','banana']
 myfruits = ['apple','kivi','grapes','banana','almond']
 # print([fruit for fruit in myfruits if fruit in basket and fruit.startswith('a')])
