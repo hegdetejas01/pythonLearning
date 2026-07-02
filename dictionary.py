@@ -121,13 +121,13 @@ for i in d:
 
 ########## FUNCTIONS #########
 # len and sorted
-
+d = {'name': 'tejas', 'age': 45, 'gender': 'male', 'place': 'bangalore', 'weight': 45}
 print(len(d))
 print(sorted(d)) # sorts all keys in the list
 print(sorted(d,reverse=True))
 print(min(d))
 print(max(d))
-
+ 
 print(d.items()) # gives all key value pairs within a tuple
 print(d.keys())
 print(d.values())
