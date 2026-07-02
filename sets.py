@@ -158,9 +158,9 @@ symmetric_difference and symmetric_difference_update
 """
 
 # isdisjoint / issubset / issuperset
-s1 = {1,2,3,4}
-s2 = {5,6,7,8}
-print(s1.isdisjoint(s2)) # True
+s1 = {1,2,3,4,5}
+s2 = {4,5,6,7,8}
+print(s1.isdisjoint(s2)) # False
 
 s1 = {1,2,3,4,5}
 s2 = {6,7}
