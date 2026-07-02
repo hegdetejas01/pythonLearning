@@ -13,6 +13,7 @@
 # Tuples take less memory then list
 # Built in function is more in list
 # list is more error prone compared to list
+# Usability 
 
 
 ### Creating tuples
