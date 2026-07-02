@@ -255,7 +255,7 @@ if flag:
 
 
 
-# number of words in a string without using split()
+# Write a program to count the number of words in a string without using split()
 s = input("Please enter the string: ").strip()
 if not s:
     print(0)
