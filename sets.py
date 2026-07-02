@@ -1,5 +1,17 @@
 # sets and set theory
 
+# Set is an unordered collection of items. 
+# Everyset element is unique and must be immutable.
+# However sets are mutable
+
+# Characteristics
+# 1. unordered
+# 2. mutable
+# 3. no Duplicates
+# 4. can't contain mutable datatypes
+# 5. sets are mutable 
+
+
 ### Creating sets
 
 s = {} # this doesn't create set, this creates a dictoinary
@@ -31,7 +43,7 @@ print(s1 == s2) # True - because tuple is unordered
 
 
 
-### Accessing the elements - elements cant be accessed by indexing or slicing
+### Accessing the elements - elements can't be accessed by indexing or slicing
 
 
 ### Editing the items - not allowed
