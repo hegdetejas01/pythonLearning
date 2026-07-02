@@ -1,6 +1,6 @@
 # Strings - collection of character which are unicodes (not ascii)
 
-#Creating Strings
+# Creating Strings
 s1 = "Hello" # Creation of string
 s2 = 'Hello'
 s3 = """
@@ -21,7 +21,7 @@ s8 = str(4)
 print(s8)
 
 
-#Accessing substrings from a string
+# Accessing substrings from a string
 s9 = "Hello World"
 for i in s9:
     print(i)
@@ -57,7 +57,7 @@ print(s9[-5:-1])
 print(s9[-1:-7:-1])
 
 
-#Editing and deleting in strings
+# Editing and deleting in strings
 s = "hello world"
 # s[0] = 'H' -----> This throws error because python strings are immutable
 # print(s)
@@ -66,7 +66,7 @@ del s
 # print(s)  ---> This throws error because s is already deleted
 
 
-#Operations on strings
+# Operations on strings
 ## Airthmatic operation - addition and multiplication
 print('delhi'+' bangalore')
 print('delhi ' * 5)
@@ -101,7 +101,7 @@ for i in 'delhi':
     print('pune') # prints pune 5 times
 
 
-##Membership operation
+## Membership operation
 print('d' in 'Delhi')
 print('D' not in 'Delhi')
 
