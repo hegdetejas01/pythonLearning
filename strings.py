@@ -71,7 +71,7 @@ del s
 print('delhi'+' bangalore')
 print('delhi ' * 5)
 
-## Relational operation
+## Relational operation (comapring strings lexiographically -> comparing based on ASCII values)
 print('delhi' == 'mumbai')
 print('delhi' == 'delhi')
 print('delhi' > 'pune')
