@@ -209,6 +209,18 @@ print(email[:pos])
 
 
 
+# Count the frequency of a particluae character in a provided string
+s = input("Enter the string: ")
+search = input("What would you like to search")
+count = 0
+for i in s:
+    if i == search:
+        count += 1
+prnt("Frequency: ", count)
+
+
+
+
 # Write a prog to remove a perticular char from a strong
 s = input("Enter the string: ")
 c = input("Enter the char to remove from the string: ")
