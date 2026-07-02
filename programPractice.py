@@ -256,6 +256,25 @@ if flag:
 
 
 # Write a program to count the number of words in a string without using split()
+
+s = input("Please enter the string: ")
+L = []
+temp = ''
+count = 1
+for i in s:
+    if i != ' ':
+        temp = temp + i
+    else:
+        L.append(temp)
+        temp = ''
+        count += 1
+        
+L.append(temp)
+print(L)
+print(count)
+
+
+
 s = input("Please enter the string: ").strip()
 if not s:
     print(0)
