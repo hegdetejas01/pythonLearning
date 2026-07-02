@@ -1,11 +1,23 @@
-## creating dict
+################### DICTIOANRY ####################
+# 1. collection of key - value pair
+# 2. also called as maps or associative array in other languages
+
+# Characteristics
+# 1. mutable
+# 2. indexing has no meaning
+# 3. key can't be repeated
+# 4. key can't be mutable datatype
+# 5. unordered
 
 
 # KEY in dictionary can't be mutable datatype
 # Why should be the key a immutable datatype?? 
 # because dictionary uses hashing on keys to find out where to store the items - if the key is mutable, then the hash function for that key should also change and a new place in the memory should be alloted to all the items in the dictionary which takes a lot of time.
 
-d1 = {}
+
+## creating dict
+
+d1 = {} # empty dictionary
 d2 = {'name':'tejas','gender':'male'} # 1D-homogeneous
 d3 = {'name':'tejas','gender':'male', (1,2,3):'okya'} #1D-heterogeneous
 
