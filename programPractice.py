@@ -242,6 +242,17 @@ else:
     print("Not Palindrome")
 
 
+#ORR
+s = input("Please enter the string: ")
+flag = True
+for i in range(0,len(s)//2):
+    if s[i] != s[len(s) - i - 1]:
+        flag = False
+        print("Not a palindrome")
+if flag:
+    print("Palindrome")
+
+
 
 
 # number of words in a string without using split()
