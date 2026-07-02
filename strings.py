@@ -50,12 +50,14 @@ print(s9[2:len(s9):2])
 print(s9[6:0:-1])
 print(s9[::-1]) # reversing a string
 
+
 ## slicing with negative indexing
 s9 = "Hello World"
 print(s9[-5:-1])
 print(s9[-1:-7:-1])
 
 
+#Editing and deleting in strings
 s = "hello world"
 # s[0] = 'H' -----> This throws error because python strings are immutable
 # print(s)
@@ -64,18 +66,19 @@ del s
 # print(s)  ---> This throws error because s is already deleted
 
 
-# Airthmatic operation - addition and multiplication
+#Operations on strings
+## Airthmatic operation - addition and multiplication
 print('delhi'+' bangalore')
 print('delhi ' * 5)
 
-# Relational operation
+## Relational operation
 print('delhi' == 'mumbai')
 print('delhi' == 'delhi')
 print('delhi' > 'pune')
 print('D' > 'd')
 
 
-# Logical operation
+## Logical operation
 
 # Empty strings are considered as FALSE
 # is a string has characters, it is considered as TRUE
@@ -90,13 +93,15 @@ print(not 'hello')
 
 
 
-# Loops
+## Loops
 for i in 'hello':
     print(i)
 
 for i in 'delhi':
     print('pune') # prints pune 5 times
 
+
+##Membership operation
 print('d' in 'Delhi')
 print('D' not in 'Delhi')
 
