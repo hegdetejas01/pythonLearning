@@ -92,6 +92,9 @@ display(india='delhi',sl='colombo',nepal='katmandu')
 display(india=5,sl=6,nepal=7)
 
 
+#How functions are executed in memory??
+#Local and global scope
+
 
 #### if no return statement
 
