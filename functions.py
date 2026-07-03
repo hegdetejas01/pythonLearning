@@ -54,7 +54,7 @@ print(power(b=2,a=3))
 
 
 
-### *args and **kwargs - used to pass the variable lenght of arguments to the functions
+### *args and **kwargs - are special Python keywords, used to pass the variable lenght of arguments to the functions
 # order of argument matters: normal argument >> *args >> **kwargs
 
 # *args helps to pass a variable number of non-keyword arguments to a function
