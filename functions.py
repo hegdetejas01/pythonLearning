@@ -18,7 +18,8 @@ for i in range(1,11):
 print(is_even('hello'))
 
 
-
+print(is_even.__doc__) # to view the docstring of a function
+print(print.__doc__)
 
 
 
