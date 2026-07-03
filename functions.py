@@ -149,6 +149,15 @@ print(x)
 
 
 
+def f(x)
+    x = x + 1
+    print('in f(x): x = ',x)
+    return x
+
+x = 3
+z = f(x)
+print('in main program scope: z =', z)
+print('in main program scope: x =', x)
 
 
 ############# NESTED FUNCTIONS ############
@@ -171,6 +180,19 @@ def f():
 f()
 
 
+def g(x):
+    def h():
+        x = 'abc'
+    x = x + 1
+    print('in g(x): x =', x)
+    h()
+    return x
+
+x = 3
+z = g(x)
+
+
+
 
 
 ##### Functions in python is a first class citizen #####
@@ -178,38 +200,45 @@ f()
 def square(num):
     return num**2
 
-print(type(square))
+print(type(square)) # type and id
 print(id(square))
 
-x = square
+x = square # reassign
 print(id(x)) ## x is also refereing to square (same memory address)
 print(x(5))
 print(square(5))
 
-del square
+del square # deleting a function
 print(x(4))
 # print(square(4))  --> throws error because square is deleted
+
+
 
 def square(num):
     return num**2
 
-sqList = [1,2,3,square]
+sqList = [1,2,3,square] # storing
 print(sqList[-1])
 print(sqList[-1](5)) ## square of 5
+
 
 # functions are immutable
 s = {square} # this code runs means square is immutable
 print(s)
 
-def f():
+
+# returning a function
+def f():  
     def x(a,b):
         return(a+b)
-    return x
+    return x  
 
 val = f()(3,4) # f() returns x, and this results into x(3,4), that is the function inside a function can be accessed from main like this
 print(val)
 
-def fa():
+
+# function as argument
+def fa(): 
     print("inside fun a")
     return
 def fb(z):                      # z gets fa as parameter
