@@ -118,8 +118,8 @@ Characteristics
 Helps in code reusability
 
 2 types of function
-1. Buil it
-2. User defined 
+1. Built in function
+2. User defined function
 
 2 principles of function:
 1. Abstraction
