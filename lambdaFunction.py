@@ -1,7 +1,7 @@
 # it is a small anonymous function
 # lambda a,b: a+b
 # lambda parameter: expression
-# Characteristic
+# Characteristic / Diff between lamda and normal function
 # 1. No name
 # 2. lambda doesn't return any value (infact, it returns entire function)
 # 3. not reusable
