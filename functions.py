@@ -104,7 +104,7 @@ def is_even(num):
     else: print('odd')
 
 print(is_even(5)) # output = odd
-                  #return value  = None
+                  # return value  = None
 # if there is no return statement in the program, default value it returns is None, hence None also gets printed
 L = [1,2,3]
 print(L.append(4)) # this prints None, because append function doesn't prints anything
