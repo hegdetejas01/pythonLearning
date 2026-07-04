@@ -1,5 +1,6 @@
 def is_even(num):
     """
+    # this is called as a docstring
     This function returns if the given number is even or odd
     input - any valid integer
     output - odd or even
@@ -58,7 +59,7 @@ print(power(b=2,a=3))
 ### *args and **kwargs - are special Python keywords, used to pass the variable lenght of arguments to the functions
 # order of argument matters: normal argument >> *args >> **kwargs
 
-# *args helps to pass a variable number of non-keyword arguments to a function
+# *args helps to pass a variable number of "non-keyword arguments" to a function
 def addNum(*args):   # args is the name of the variable
     print(type(args)) ## Tuple
     sum = 0
@@ -81,8 +82,8 @@ print(multipy(1,2,3,4,5,6,7,8,9,10))
 
 
 
-# **kwargs - allows us to pass variable number of KeyWord argument
-# keyword argument means they contain a keyvalue pair, like a python dictionary
+# **kwargs - allows us to pass variable number of "KeyWord argument"
+# keyword argument means they contain a "keyvalue pair", like a python dictionary
 def display(**kwargs):
     #kwargs will be dictionary
     for (k,v) in kwargs.items():
@@ -117,7 +118,6 @@ print(L)
 ##### Local versus Global variable #####
 # 1. from funtions we can only access (cannot change) the global variable
 # 2. from global frame we can't access local variable of the function
-# 3. 
 
 def simple(y):
     print(x)
@@ -143,6 +143,7 @@ print(x)
 def h(y):
     global x # telling the comp to use global x
     x += 1
+    print(x)
 x = 5
 h(x)
 print(x)
@@ -174,7 +175,7 @@ f()
 def f():
     def g():
         print("Inside function g")
-        # f() --> creates infinite printinga
+        # f() --> creates infinite printings
     g()
     print("Inside function f")
 f()
@@ -183,6 +184,7 @@ f()
 def g(x):
     def h():
         x = 'abc'
+        print(x)
     x = x + 1
     print('in g(x): x =', x)
     h()
@@ -190,7 +192,7 @@ def g(x):
 
 x = 3
 z = g(x)
-
+print(x, z)
 
 
 
@@ -209,7 +211,7 @@ print(x(5))
 print(square(5))
 
 del square # deleting a function
-print(x(4))
+print(x(4)) # x still works
 # print(square(4))  --> throws error because square is deleted
 
 
@@ -233,7 +235,7 @@ def f():
         return(a+b)
     return x  
 
-val = f()(3,4) # f() returns x, and this results into x(3,4), that is the function inside a function can be accessed from main like this
+val = f()(3,4) # f() returns function x, and this results into x(3,4), that is the function inside a function can be accessed from main like this
 print(val)
 
 
@@ -247,4 +249,3 @@ def fb(z):                      # z gets fa as parameter
 
 print(fb(fa))
 # output - inside fun b, inside fun a
-
