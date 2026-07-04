@@ -6,14 +6,14 @@
 # 2. Immutable
 # 3. Allows Duplicates
 
-# Diff between Lists and Tuples
-# Syntax
-# Mutability
-# Tuples are faster than list since it is immutable
-# Tuples take less memory then list
-# Built in function is more in list
-# list is more error prone compared to list
-# Usability 
+# Diff between Lists and Tuples: 
+# 1. Syntax
+# 2. Mutability
+# 3. Tuples are faster than list since it is immutable
+# 4. Tuples take less memory then list
+# 5. Built in function is more in list
+# 6. list is more error prone compared to list
+# 7. Usability 
 
 
 ### Creating tuples
@@ -24,7 +24,7 @@ t = (2) # this is not a tuple
 print(t)
 print(type(t)) # integer
 
-t = (2,) # this is a single element tuple
+t = (2,) # this is a single element tuple # adding a comma is mandatory to become a tuple
 print(t)
 print(type(t)) # Tuple
 
@@ -114,7 +114,7 @@ a = 1; b= 2
 a,b = b,a
 print(a,b)
 
-a,b,*others = (1,'okay',3,4,'hello') #(1 --> a), ('okay' --> b), ([3,4,'hello'] --> others)
+a,b,*others = (1,'okay',3,4,'hello') #(1 --> a), ('okay' --> b), ([3,4,'hello'] --> others) # the left over elements after assigning to a,b will be stored in others in the form of a list []
 print(a,b,others)
 
 

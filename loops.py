@@ -8,6 +8,8 @@ while i<=10:
 
 
 # While loop with else
+# The else block executes only if the loop finishes normally (i.e., the condition x < num becomes false).
+#If the loop is forcefully interrupted, the else block is skipped.
 num=int(input("Enter the number: "))
 x=0
 while x<num:

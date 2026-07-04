@@ -32,8 +32,8 @@ print(s) # output = {1, 2.3, 'hello'}, since sets doesn't allow duplicates and t
 s = {1,2.3,'okay',(4,5.6)} # tuple is immutable and it can be element
 print(s)
 
-s = set([1,2,3])
-print(s)
+s = set([1,2,3]) # this creates a set with element {1,2,3}
+print(s) 
 s = set((1,2,3))
 print(s)
 
@@ -50,6 +50,7 @@ print(s1 == s2) # True - because tuple is unordered
 
 
 ### Adding/Updating items into set
+# update adds multiple elements to sets whereas add adds only one element to a set
 s = {1,2,3,4}
 s.add(5) # Position of the addition can't be controlled
 print(s)
@@ -74,7 +75,7 @@ del s
 s = {1,2,3,4,5}
 s.discard(5) # discards the particular element
 print(s)
-s.discard(10) # doesn't throw error
+s.discard(10) # doesn't throw error even if the element is not present
 
 s = {1,2,3,4,5}
 s.remove(5)

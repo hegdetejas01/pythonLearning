@@ -78,7 +78,7 @@ p.append('pune') # adds pune as a single item at the end of the list
 print(l,m,n,o,p,sep="\n")
 
 l = [1,2,3,4,5]
-l.insert(1,100) # add 100 at index 1
+l.insert(1,100) # insert 100 at index 1
 print(l)
 
 
@@ -94,7 +94,8 @@ l = [1,2,3,4,5,6]
 l[1:4] = [200,300,400]
 print(l)
 
-
+l[1:4] = [200,300]
+print(l)
 
 ## Deleting items from a list (del, remove, pop, clear)
 l = [1,2,3,4,5,6]
@@ -176,7 +177,7 @@ print(sorted(l,reverse=True))
 
 l = [1,2,3,1,2,3,4,5,1,1,1,1,1,1]
 print(l.count(1))
-print(l.count(0))
+print(l.count(0)) # 0, doesn't throw error even if the element is not present
 
 print(l.index(1))
 print(l.index(3))
@@ -185,7 +186,7 @@ print(l.index(3))
 l.reverse() # permanently reverses the list
 print(l)
 
-# sorted in not a permanent change - temporory action
+# sorted is not a permanent change - temporory action
 # sort is permanent
 l = [1,3,1,8,3,10]
 print(l)
@@ -217,7 +218,7 @@ for i in range(0,len(l)):
 
 
 ### Disadvantages of Python lists
-slow, risky usage, eats up more memory
+# slow, risky usage, eats up more memory
 
 # Risky usage
 a = [1,2,3]

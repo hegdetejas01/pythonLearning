@@ -98,7 +98,7 @@ for i in 'hello':
     print(i)
 
 for i in 'delhi':
-    print('pune') # prints pune 5 times
+    print('delhi') # prints pune 5 times
 
 
 # Membership operation
@@ -138,7 +138,7 @@ print(s.count('ej'))
 print(s.find('ej')) # gives the first position of ej
 print(s.find('x')) # gives -1 because x is not in the string
 print(s.index('e')) # gives the first position of e
-print(s.index('x')) # throws error
+# print(s.index('x')) # throws error
 # if a char is not present in the string and if index is used it throws error unlike find which gives -1
 
 print(s.endswith('j'))

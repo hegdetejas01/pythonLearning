@@ -27,9 +27,9 @@ print("Sum is ", a+b+c)
 
 # find the minimim of 3 numbers
 
-num1 = int(input('Enter number 1: "))
-num2 = int(input('Enter number 2: "))
-num3 = int(input('Enter number 3: "))
+num1 = int(input('Enter number 1: '))
+num2 = int(input('Enter number 2: '))
+num3 = int(input('Enter number 3: '))
 
 if (num1<num2) and (num1<num3):
     print('smallest is',num1)
@@ -227,7 +227,7 @@ print("Frequency: ", count)
 
 
 
-# Write a prog to remove a perticular char from a strong
+# Write a prog to remove a perticular char from a string
 
 s = input("Enter the string: ")
 c = input("Enter the char to remove from the string: ")

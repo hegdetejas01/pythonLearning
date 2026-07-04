@@ -5,9 +5,9 @@
 # Characteristics
 # 1. mutable
 # 2. indexing has no meaning
-# 3. key can't be repeated
-# 4. key can't be mutable datatype
-# 5. unordered
+# 3. key can't be mutable datatype
+# 4. unordered
+# 5. if key is not unique, then that key will hold the latest value
 
 
 # KEY in dictionary can't be mutable datatype
@@ -198,5 +198,3 @@ print(res)
 
 res = {j:{i:i*j for i in range(1,11)} for j in range(2,4)}
 print(res)
-
-
