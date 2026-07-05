@@ -30,7 +30,7 @@
 
 ############################## Inheritance ##############################
 
-# 1. single : parent <- child (shown as discussed above)
+# 1. single : parent <- child
 # 2. multilevel : grand parent <- parent <- child <- grand child
 # 3. hirarchical : one parent with multiple children
 # 4. multiple : multiple parent for a child class
@@ -223,6 +223,7 @@ print(m1.name)
 
 
 ##### Multilevel Inheritance #####
+# multilevel : grand parent <- parent <- child <- grand child
 class Product:
     def review(self):
         return("Product Customer Review")
@@ -258,6 +259,7 @@ s.printPvtPrice()
 
 
 ##### Hierarchical #####
+# hirarchical : one parent with multiple children
 class Person:
     def __init__(self,name,age):
         self.__name, self.age = name, age
@@ -282,6 +284,7 @@ print(m1.print_data(), w1.print_data(),sep="\n")
 
 
 ##### Multiple #####
+# multiple : multiple parent for a child class
 class Mom:
     def __init__(self, price, brand, camera):
         print ("Inside phone constructor")
