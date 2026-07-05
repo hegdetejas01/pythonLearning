@@ -27,6 +27,18 @@
 # - super() is an inbuilt function which is used to invoke the parent class methods and constructor
 
 
+
+############################## Inheritance ##############################
+
+# 1. single : parent <- child (shown as discussed above)
+# 2. multilevel : grand parent <- parent <- child <- grand child
+# 3. hirarchical : one parent with multiple children
+# 4. multiple : multiple parent for a child class
+# 5. hybrid : mixture of above 4
+
+
+
+
 class User: 
 
     def __init__(self):

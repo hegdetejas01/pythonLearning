@@ -1,4 +1,4 @@
-# Python Lists
+########### LISTS ###########
 
 # Basics:
 # 1. It is a datatype to store multiple items under one names
@@ -23,7 +23,9 @@
 # 5. Can be nested
 # 6. Dynamic
 # 7. Items can be accessed
-# 8. Can contain any kind of objects in list -> L = [1,2,print,type,input]
+# 8. Can contain any kind of objects in list - functions, user functions, built in function etc
+
+
 
 
 ## Creating a list

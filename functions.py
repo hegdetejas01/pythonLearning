@@ -1,3 +1,48 @@
+# ################# FUNCTIONS IN PYTHON ################
+
+# Helps in code reusability
+
+# 2 types of function
+# 1. Built in function
+# 2. User defined function
+
+# 2 principles of function:
+# 1. Abstraction
+# 2. Decomposition
+
+# Components of function:
+# 1. def keyword
+# 2. name of function
+# 3. (input): """docsstring to understand what this function does"""
+# 4. logic and code
+# 5. return
+
+# def is_even (i) :
+#     """
+#     what does this code do
+#     """
+#     code
+#     return
+
+# is_even(5)
+
+
+# i is parameter
+# when the value is passed from the main body it is arguement
+# that is, 5 is argument, i is parameter
+
+
+# How functions are executed in memory??
+# Local and global scope
+
+# Benefits of functions
+# 1. code modularity
+# 2. code readability
+# 3. code reusability
+
+
+
+
 def is_even(num):
     """
     # this is called as a docstring
