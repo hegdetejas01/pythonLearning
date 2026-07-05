@@ -372,3 +372,23 @@ c = Children(1,2,3)
 c.buy() # since, buy method is present in both mom and dad class, which buy method will be called here??
 # class Children(Dad, Mom) -> whichever class from which the children is inheriting is written first (here Dad), the buy function of that class will be called. Output - Buying a phone within Dad Class
 # class Children(Mom, Dad) -> whichever class from which the children is inheriting is written first (here Mom), the buy function of that class will be called. Output - Buying a phone within Mom Class
+
+
+#####
+class A:
+    def m1(self):
+        return 20
+
+class B(A):
+    def m1(self):
+        val = super().m1+30
+        return val
+
+class c(B):
+    def m1(self):
+        val = self.m1()+20  # Error due to infinite loop
+        return val
+
+obj = C()
+print(obj.m1())
+        
