@@ -184,6 +184,27 @@ print("\n\nSuper Keyword Demo\n")
 # super keyword(function) is used always inside the child class and cannot be called from outside
 # super can be used for attributes, it is only used for methods like __init__, data etc
 
+class Phone:
+    def __init__(self, price, brand, camera):
+        print ("Inside phone constructor")
+        self.__price = price
+        self.brand = brand
+        self.camera = camera
+
+    def buy(self):
+        print ("Buying a phone")
+
+class SmartPhone(Phone):
+    def buy(self):
+        print ("Buying a smartphone")
+        # syntax to call parent ka buy method
+        super().buy()
+
+s=SmartPhone(20000, "Apple", 13)
+s.buy()
+
+
+
 class Person:
     def __init__(self,name,age):
         print("Inside Parent")
@@ -214,12 +235,27 @@ print(m1.name)
 
 ##################### TYPES of INHERITENCE #####################
 
-# 1. single : parent <- child (shown as discussed above)
+# 1. single : parent <- child (shown as discussed above), child inherits from parent
 # 2. multilevel : grand parent <- parent <- child <- grand child
-# 3. hirarchical : one parent with multiple children
-# 4. multiple : multiple parent for a child class
+# 3. hierarchical : one parent with multiple children
+# 4. multiple (Diamond problem) : multiple parent for a child class
 # 5. hybrid : mixture of above 4
 
+#### Single Inheritance
+class Phone:
+    def __init__(self,price,brand,camera):
+        print("Inside phone constructor")
+        self.__price = price
+        self.brand = brand
+        self.camera = camera
+
+    def buy(self):
+        print("Buying a phone")
+
+class SmartPhone(Phone):
+    pass
+
+SmartPhone(1000, "Apple","13px").buy()
 
 
 ##### Multilevel Inheritance #####
@@ -285,6 +321,7 @@ print(m1.print_data(), w1.print_data(),sep="\n")
 
 ##### Multiple #####
 # multiple : multiple parent for a child class
+
 class Mom:
     def __init__(self, price, brand, camera):
         print ("Inside phone constructor")
