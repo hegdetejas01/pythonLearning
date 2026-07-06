@@ -154,7 +154,9 @@ Disadvantages of using Text Files
 2. Not good for other datatypes like int, float, list, tuples. Writing has to be done only with String
 
 
-
+Pickle Vs Json
+Pickle lets the user to store data in binary format.
+JSON lets the user store data in human readable text format.
 
 
 
