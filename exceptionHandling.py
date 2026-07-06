@@ -1,6 +1,55 @@
+#### syntax error ####
+
+# leaving symbols like colon,brackets
+# Misspelling a keyword
+# Incorrect indentation
+# empty if/else/loops/class/functions
+
+# SyntaxError : missing parenteses
+# print 'hello world'
+
+# SyntaxError : invalid syntax
+# if a == 3    
+    #print('Hello')
+
+# SyntaxError : invalid syntax
+# iff a == 3:   
+    #print('Hello world')
+
+# IndentationError
+# if a == 3:
+#print('hello world')  
+
+# IndexError - when trying to access an item at an invalid index
+# L = [1,2,3]
+# L[100]
+
+# ModuleNotFoundError - when a module could not found
+# import mathi
+# math.floor(5.3)
+
+# KeyError - when a key is not found
+# d = {'name':'nitish'}
+# d['age']
+
+# TypeError - when an operation or function is applied to an object of an inappropriate type
+# 1 + 'a'
+
+# ValueError - when a function's argument is of an inappropriate type
+# int('a')
+
+# NameError - when an object could not found
+# print(k)
+
+# AttributeError
+# L = [1,2,3]
+# L.upper()
+
+
+##### Exception #####
 # Try Except Block
 
-# reading a file which is not present --> Throws error
+# reading a file which is not present --> Throws error --> FileNotFoundError
 
 # with open('okaygoogle.txt','r') as f:
 #     f.read()
@@ -19,6 +68,15 @@ except:
     print("Sorry, file not found")
 
 
+# catching specific exception
+try :
+    with open('okaygoogle.txt','r') as f: # first error, if file not found
+        print(f.read())
+        print(m) # second error, if m variable not found
+except:
+    print('some error occured')
+
+        
 # Printing name of the error
 try:
     with open('okaygoogle.txt','r') as f:
