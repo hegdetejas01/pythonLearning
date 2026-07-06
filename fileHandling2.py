@@ -103,7 +103,7 @@ with open(file, 'w') as f:
 
 
 ### Serialization and Deserialisation on Custom Objects
-
+import json 
 class Tejas:
     def __init__(self):
         self.name = "tejas"
@@ -143,7 +143,7 @@ with open('fileHandling2/sample5.json','r') as f:
     print(type(d))
 
 ### But what if i want entire onject to be stored in the file and retrive it and perform the function of the class on it
-# This can be done by conveting it to binary
+# This can be done by conveting object to binary
 
 ## PICKLING ##
 # It is a process where a object is converted to byte stream, unpickling is a reverse process [byte stream] --> [object]
