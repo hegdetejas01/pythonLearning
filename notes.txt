@@ -162,7 +162,7 @@ JSON lets the user store data in human readable text format.
 
 
 
-###########################################################
+############################# Exception handling  ##############################
 There are 2 stages where errror can happen in a program
 1. During Compilation -> Syntax Error
 2. During execution -> Exception
