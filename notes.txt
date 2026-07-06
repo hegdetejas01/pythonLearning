@@ -123,8 +123,12 @@ def __methodName__
 ########################## File Handling ##########################
 
 ## Types of data for i/o
-1. Text
-2. Binary
+1. Text - '12345' as a sequence of unicode chars
+2. Binary - 12345 as a sequence of bytes of its binary equivalent  
+
+Hence there are 2 file types to deal with
+1. Text files - all program files are text files
+2. Binary files - images, music,video, exe files
 
 # 3 steps with file operation
 1. open
@@ -136,7 +140,14 @@ python picks the file and loads into RAM
 to the buffer memory, where the file is read character by character
 when the file is closed, it is loaded on to harddrive
 
+# why we need perform f.close()
+Memory - When we work with large files, they stay in RAM and use memory until the garbage collector removes them.
+security - if we don't perform f.close(), file will be in ram, so any hackers can access 
 
+# Using context manager (with)
+It's a good idea to close a file after usgae as it will free up the resources
+If we don't close it, garbage collector would close it
+with keyword closes the file as soon as the usgae is over
 
 Disadvantages of using Text Files
 1. Can't work on binary files like images
