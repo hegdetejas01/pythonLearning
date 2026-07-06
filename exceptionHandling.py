@@ -68,7 +68,7 @@ except:
     print("Sorry, file not found")
 
 
-# catching specific exception
+# there are 2 possible errors but showing same message for both the errors
 try :
     with open('okaygoogle.txt','r') as f: # first error, if file not found
         print(f.read())
@@ -101,10 +101,14 @@ except FileNotFoundError:
 except NameError:
     print("Variable not found")
 
+except ZeroDivisionError:
+    print("can't divide by 0")
+
 except: # default - any other error than nameerror and filenotfountfounderror
     print("Some error occured")
 
 
+# Exception handling can be done for both syntax and exception errors but lot of time we use it onlt for exceptions
 
 
 ### Try - Except - Else
@@ -127,7 +131,7 @@ else: # this block of code gets executed if the try block was executed.
 
 
 
-# Try - Except - Else - Finally
+### Try - Except - Else - Finally
 
 file = 'fileHandling2/sample1.txt'
 # file = 'helloworld.txt'
@@ -211,7 +215,7 @@ else:
 
 
 
-
+# why we need custon exception
 #### Google Example ####
 print("\n")
 class SecurityError(Exception):
