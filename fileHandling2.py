@@ -20,7 +20,7 @@ with open(file, 'rb') as rf: # read binary = rb, here it reads binary data from 
 # int
 file = "fileHandling2/sample1.txt"
 with open(file,'w') as f:
-    #f.write(5) # throws error - write performs only on strings
+    f.write(5) # throws error - write performs only on strings
 
 
 file = "fileHandling2/sample1.txt"    
