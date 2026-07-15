@@ -107,6 +107,32 @@ with open('fileHandling2/sample4.json','w') as f:
     json.dump(tejas,f,default=showObjectAs1,indent=4)
 
 
+######  Working with multiple objects #####
+ 
+class Tejas:
+    def __init__(self,name='tejas',age='10',gender='m',place="bangalore"):
+        self.name = name
+        self.age = age
+        self.gender = gender
+        self.place = place
+
+tejas1 = Tejas()
+tejas2 = Tejas('Ganesh',43,'m','mumbai')
+
+
+def showObjectAs1(objs):
+    print(objs[0])
+    return "{} --> {} --> {} --> {}".format(objs[0].name, objs[1].age, objs[0].gender, objs[1].place)
+
+    
+with open('fileHandling2/sample4.json','w') as f:
+    json.dump([tejas1, tejas2],f,default=showObjectAs1,indent=4) # this creates a loop automatically first sending tejas1 and then tejas2
+
+
+
+#####
+
+
 with open('fileHandling2/sample5.json','w') as f:
     json.dump(tejas,f,default=showObjectAs2,indent=4)
 
