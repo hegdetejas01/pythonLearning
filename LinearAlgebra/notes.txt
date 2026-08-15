@@ -1,0 +1,123 @@
+1. Helps in generalizing the concepts in higher dimension
+2. Concept of hyperplane
+3. Data representation - any form of data like tabular, text, video etc can be represented in linear algebra and hence can be used to train ML models
+4. It works well with out CPUs and GPUs
+
+
+### Vectors ###
+
+    1. Point in a 2D/3D etc co ordinate system is represented in form of vector 
+    Point in a particular co ordinate system
+        eg: a=[2,3], b=[2,3,4]
+        2 and 3 | 2 and 3 and 4 are called as components of the vector
+
+    2. Dimension: Vector in nD co ordinate system has a dimension of n
+    3. Used as a feature vector in ML 
+    4. Vectors are usually represented as numbers
+
+    Eg: Used in recommender system
+
+    # Row Vector: Vector represented in the form of row (1 x n)
+    # Coloum Vector: Vector represented in the form of column (n x 1) 
+
+    # Distance from the origin/Magnitude
+        A = [x,y]
+        ||A|| = distance from origin = sqrt(x^2 + y^2)
+
+        B = [x,y,z]
+        ||B|| = distance from origin = sqrt(x^2 + y^2 + z^2)
+
+        C = [a,b,c,...]
+        ||C|| = distance from origin = sqrt(a^2 + b^2 + c^2 + ...)
+
+    # Euclidean Distance
+        In 2D space
+        [a,b] and [c,d]
+        distance = sqrt(((c-a)^2) + ((d-b)^2))
+
+        In 3D space
+        [x1,y1,z1] and [x2,y2,z2]
+        distance = sqrt((x2-x1)^2 + (y2-y2)^2 + (z2-z1)^2)
+
+        Used in k-nearest algorithm
+
+    # Scalar Addition and Scalar Subtraction - this shifts the vector in the co-ordinate system and hence called as SHIFTING
+
+        V = [v1,v2,v3,..,vn]
+        scalar = n 
+        Scalar Addition = V + scalar = [v1+n,v2+5,v3+5,...]
+        Scalar Subtraction = V - scalar = [v1-n,v2-5,v3-5,...]
+
+        Used in mean centering - PCA, linear regression, clustering, regularisation etc
+
+    # Multiplication: 
+        1. Dot Product / Scalar Product
+        2. Cross Product / Vector Product
+
+    # Dot Product
+        A = [a1,a2,a3,...,an] nx1 - column
+        B = [b1,b2,b3,...,bn] nx1 - column
+        Component wise product and sum of all = a1b1 + a2b2 + a3b3
+
+        AT x B (A transpose x B) = A.B
+        Result is a SCALAR VALUE
+
+        Dot product is commutative : A.B = B.A
+        Dot product is distributive: A.(B+C) = A.B + B.C
+
+        1. Used to compute similarity between 2 vectors
+        2. Used to calculate projections
+        3. Used to perform matrix multiplication
+        4. Used in Deep Learning
+    
+    # Angle between 2 vectors
+
+        A and B are vectors, angle between them is theta
+        (dot product) A.B = ||A|| ||B|| cos(theta)
+
+        * if, A and B are not zero and A.B = 0, hence, ||A|| ||B|| cos(theta) = 0
+        means, angle between then is 90 (perpendicular)
+        * helps to calculate the angle between the two vectors 
+
+    # COSINE SIMILARITY 
+
+        cos(theta) = A.B / (||A|| ||B||)
+        This is the angle between 2 vectors 
+        Used as similarity measure
+
+        if cos(theta) = 1; theta = 0; then both vectors are similar(same direction)
+        if cos(theta) = -1; theta = 180; then both vectors are disimilar(opposite direction)
+        if cos(theta) = 0; theta = 90; no similarity between the vectors
+
+    # Hyperplane
+        * Helps for representing multidimensional data 
+
+        * 2D - equation of a line
+            equation: y=mx+b
+
+            equation:   ax+by+c = 0
+                        y = (-a/b)x + (-c/b)
+                        therefore, m= -a/b, b= -c/b
+
+            equation:   w1x1 + w2x2 + w0 = 0
+                        WT * X + w0 = 0
+
+        * 3D - equation of a plane 
+            equation:   w1x1 + w2x2 + w3x3 + w0 = 0
+                        WT * X + w0 = 0
+
+        * nD - equation of a hyperplane of n dimension
+            equation:   w1x1 + w2x2 + w3x3 + ... + wnxn + w0 = 0
+                        W = [w1,w2,w3,...,wn]
+                        X = [x1,x2,x3,...,xn]
+
+                        WT * X + w0 = 0
+
+            If the hyperplane passes through origin, then
+            WT * X = 0
+
+            W.X = ||W|| ||X|| cos(theta) = 0
+            theta = 90 degree
+
+            W and X are 90 degree apart
+            W is perpendicular to the hyperplane
