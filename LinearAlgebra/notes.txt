@@ -121,3 +121,153 @@
 
             W and X are 90 degree apart
             W is perpendicular to the hyperplane
+
+
+### Matrices ###
+    * Matrix are the rectangular array of numbers arranged in the form of rows and columns
+    * Order of the matrix : number of rows * number of columns 
+
+    Applications:
+        1. Linear system of equations: Eg- 5x+3y=6
+        2. Linear Transformation
+        3. Eigen Values and eigen vectors 
+        4. Graph theory
+        5. Markov chain
+        6. Graphics
+        7. Optimisation
+    
+    Types of Matrices:
+        1. Normal matrix
+        2. Row matrix / Row vector : Only one row
+        3. Column matrix : Only one column 
+        4. Square matrix : 
+            * number of columns = number of rows
+            * for diagonal elements, row number = column number
+
+        5. Diagonal matrix : 
+            * Square matrix
+            * non diagonal elements are zero
+        
+        6. Scalar matrix :
+            * diagonal matrix
+            * all diagonal items are equal
+        
+        7. Identity matrix
+            * Scalar matrix
+            * diagonal element value = 1
+
+        8. Zero matrix : All elements are zero
+
+        9. Singular matrix: Those square matrix whose determinant is ZERO 
+
+    # When are 2 matrix, A and B, equal?
+        * Order should be same
+        * Aij = Bij
+
+    # Scalar Operations : Addition and Multiplication
+        * Scalar addition: Scalar value get added to all the elements of the matrix
+        * Scalar Multiplication: Scalar value get multiplied to all the elements of the matrix
+            Eg: multiplying a matrix with -1 gives the nagative of the matrix
+            A * -1 = -A
+
+        * scalarValue = k
+        k (A + B) = kA + kB 
+
+    # Matrix Addition, Subtraction
+        * Addition
+            - Order should be same
+            - Element wise addition will occur
+
+        * Subtraction
+            - Order should be same
+            - A + (-1 * B)
+
+        * A + B = B + A
+        * A+(B+C) = (A+B)+C
+
+        * Additive Identity: 
+            - Adding a matrix to A to give a
+            - A + X = A
+            - X is a zero matrix 
+    
+        * Additive inverse:
+            - A - X = 0
+            - X is negative of A
+            * Additive inverse is the negative of the matrix
+
+    # Matrix Multiplication
+        * It is baiscally a dot product and not element wise multiplication
+        * Columns of 1st matrix should be same as the rows of the second matrix, that is, A: x*y and B: y*z
+        * Shape of the resultant matrix = x*z
+
+        Rules:
+            1. AB != BA
+            2. (AB)C = A(BC)
+            3. A(B+C) = AB + AC 
+        
+        Multiplicative Identity:
+            * A x X = A
+            * X is the Identity Matrix of the same order
+            * For this A should be a square matrix
+
+    # Transpose of a matrix
+        * Converting the rows into columns and columns to rows 
+        * If A: x*y, then A(T): y*x
+
+        * Symmetric matrix:
+            A = A(T)
+            Transpose of a matrix gives the matrix itself
+
+        * Skew Symmetric matrix:
+            A(T) = -A
+            Transpose of a matrix gives the negative of the matrix
+
+        * Rules
+            1. Transpose of A(T) gives A
+            2. (A+B)T = AT + BT
+            3. (AB)T = BT . AT 
+
+    # Inverse of a matrix 
+        * An inverse matrix is a matrix when multiplied by the original matrix results in the identity matrix
+        * AxA(inverse) = I
+
+        if AX = B,
+        then X = B/A            --> Matrix division is not possible
+        therefore, X = B A(inverse)
+
+        * Not all matrices are invertible
+        * Only few square matrix are invertible
+        * Determinant of the square matrix should not be ZERO, it should be non singular.
+        
+            Then, 
+            A(inverse) = Adjoint(A)/determinat(A)
+
+        * To find adjoint we need determinant, minor, co-factor
+
+    # Determinant
+        * It is a scalar value
+        * Applicable only for square matrix
+
+        * Uses:
+            - invertibility of a matrix
+            - finding solutions to systems of linear equations
+            - calculating the volume scaling factor for linear transformation
+
+    # Minor 
+        * Minor of an element aij of a determinant is the determinant obtained by deleting the row and column where it is present. It is denoted by Mij
+
+    # Co-Factor
+        * Co-Factor of an element is defined by 
+        Aij = -1^(i+j) Mij
+            Eg, A23 = (-1)^5 + M23 
+
+        * Sum of the product of elements of any row (or column) with their corresponding co-factors gives determinant
+            Eg: A11a11 + A12a12 + A13a13
+
+    # Adjoint/Adjugate/Classical Adjoint
+        * Replace each item with co-factor and take the transpose of the matrix
+
+    # Finding the values in linear algebra
+        A X = B   
+        X = A(inverse) . B 
+         
