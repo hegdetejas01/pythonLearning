@@ -270,4 +270,88 @@
     # Finding the values in linear algebra
         A X = B   
         X = A(inverse) . B 
-         
+
+
+### Class 3 ###
+
+    # Basis Vector:
+        * Vectors are the set of numbers. Number of elements = number of dimensions
+        * 2D vectors and 2D point are the same thing
+
+        * For any co-ordinate systems, there are few vectors with unit distance 1 and they exist on the axis, and they are independent of each other
+            Eg, for 2D co-ordinate system, there are 2 unit vectors (distance from origin = 1) and one vector is present on x axis (i) and another is on y axis (j)
+
+        * Any point can be represented by these vectors
+            Eg, for a point [2, 3], it can be represented as 2i+3j.
+            This is called as linear combination
+
+        * The points in the co-ordinate system (scalars) are multiplied by the unit vectors to get the resultant vector.
+
+
+    # Linear Transformations
+        * Matrices acts as a transformations on vectors
+        * Any matrix can be called as linear transformation
+        * Transformation is a function which provides output upon giving the input
+        * When a vector is given as a input for matrix/transformation gives another vector
+
+        * [2,3] -> [[2,4],[5,6]] gives a new vector [7, 8]
+
+        * [[2,3],[1,2]] : matrix/transformation
+            [2,1] determines where the i moves, [3,2] determines where should j move
+
+        * The entire co-ordinate system transforms
+
+        Rules:
+            1. Origin remains same 
+            2. Grid lines will be parallel
+
+    # Matrix Multiplication as Composition
+        * Multipication of 2 matrix (transformation) results in another matrix (transformation)
+        * This also tranforms the co-ordinate space
+        * Matric multiplication is the Composition of Transformation
+
+        C -> B -> C` -> A -> C``
+        C -> AB -> C``
+
+            Both the above are same
+                - In the first one, the co ordinate system moves to C` (new co-ordinate space after transformation) on multiplying the B matrix, on multiplying the C` co - ordinate with A, we get the new transformed state C``
+                - In the second case, we first multiply A and B and it is applied on C to directly get the new space (transformed) C``
+
+    # Determinant 
+        * This number says that what will be the ratio of the areas upon applying linear transformation
+        * If the area = a in the original co ordinate space, and if the area' = a' in the transformed co ordinate space, then the determinant is a'/a 
+        * If determinant is zero,
+            means that all points of the original co-ordinate system now lies on a single line - 2D space is transformed into 1D space
+            And inverse can't be calculated
+        
+        * What is the meaning of negative determinant?
+            The transformation has fliped the entire co-ordinate space
+
+    # Inverse
+        * AX = B means, there is some vector X, on which when A transformation is applied, it becomes B
+        * Inverse is basically reverting the transformation/reverse transformation
+        * I have B, the vector in new co-ordinate space which is obtained by applying A transformation on X vector, so backtracking B in the original co-ordiante space will give X
+
+    # Transformation for non square matrix?
+        * It is possible 
+
+        * Consider A (tall matrix where r>c) = [[1,2],[3,4],[5,6]]
+        * here, i is transforming from [1,0] to [1,3,5] and j is transforming from [0,1] to [2,4,6] 
+            - 2D space is being transformed to 3D space. 
+            - The original co-ordiante system will become a sheet within the new co-ordinate system. 
+            - Every vector in the original co-ordiante system will become a point within sheet.
+        * if A has 5 rows, then 2D space becomes 5D space
+
+        * Consider a wide matrix (c>r) A = [[1,2,3],[4,5,6]]
+            Here a 3D space is getting transformed to 2D system
+
+        * Tall Matrix -> Lower to Higher dimension
+        * Wide Matrix -> Higher to Lower dimension
+
+        * Using square matrix doesn't change the dimension 
+
+        * Therefore, it makes sense to have determinant only for square matrix, because the input and the putput space will be of the same dimension
+
+    # Why inverse is present only for non-singular matrix?
+        * determinant of A != 0
+        * When determinant is 0, 2D space becomes 1D, hence it is not possible: multiple 2D vectors has become a same 1D vector.
